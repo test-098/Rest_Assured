@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GET API">
+
+    <listeners>
+        <listener class-name="resources.ReportSetup"/>
+    </listeners>
+
+    <test name="GET all users">
+        <classes>
+            <class name="com.api_testing.Tests.GetAPITest">
+                <methods>
+                    <include name="getAPIUsers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

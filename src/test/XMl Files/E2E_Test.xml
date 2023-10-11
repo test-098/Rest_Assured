@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = " E2E Suite">
+
+    <listeners>
+        <listener class-name="resources.ReportSetup"/>
+    </listeners>
+
+    <test name = "API Call">
+
+        <classes>
+
+            <class name="com.api_testing.Tests.PostAPITest">
+                <methods>
+                    <include name="postAPIMap"/>
+                </methods>
+            </class>
+
+            <class name = "com.api_testing.Tests.GetAPITest">
+                <methods>
+                    <include name="getAPIUser"/>
+                </methods>
+            </class>
+
+            <class name="com.api_testing.Tests.PutAPITest">
+                <methods>
+                    <include name="putAPIString"/>
+                </methods>
+            </class>
+
+            <class name="com.api_testing.Tests.PatchAPITest">
+                <methods>                                                   
+                    <include name="patchAPI"/>
+                </methods>
+            </class>
+
+            <class name="com.api_testing.Tests.DeleteAPITest"></class>
+
+        </classes>
+
+    </test>
+</suite>

@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite">
+
+    <listeners>
+        <listener class-name="resources.ReportSetup"/>
+    </listeners>
+
+    <test name="POST and GET API">
+        <classes>
+            <class name="com.api_testing.Tests.PostAPITest">
+                <methods>
+                    <include name="postAPIMap"/>
+                </methods>
+            </class>
+
+            <class name="com.api_testing.Tests.GetAPITest">
+                <methods>
+                    <include name="getAPIUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
